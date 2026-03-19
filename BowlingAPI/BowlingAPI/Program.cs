@@ -8,7 +8,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
 });
-// --- ADDED: Register the Database Connection ---
+// Use just the filename so it looks in the project folder itself
 builder.Services.AddDbContext<BowlingLeagueContext>(options =>
     options.UseSqlite("Data Source=BowlingLeague.sqlite")
 );
